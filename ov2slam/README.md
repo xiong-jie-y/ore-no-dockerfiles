@@ -31,10 +31,17 @@ cd /workspace/catkin_ws
 rosrun ov2slam ov2slam_node src/ov2slam/parameters_files/fast/euroc/euroc_mono.yaml
 ```
 
-shell2
+main shell.
 ```bash
 cd /workspace/catkin_ws
 rosrun rviz rviz -d src/ov2slam/ov2slam_visualization.rviz
 ```
+
+shell2.
+```bash
+cd /workspace/catkin_ws
+rosbag play /data/${ROSBAG_LOCATION}
+```
+
 
 And then run rosbag reader to feed the data to ov^2 slam.
