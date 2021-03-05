@@ -1,4 +1,5 @@
-This is a docker file for OV^2 SLAM.
+# What is it?
+This is a dockerfile for [OV^2 SLAM](https://github.com/ov2slam/ov2slam).
 
 To build the docker image, run
 
@@ -32,8 +33,6 @@ rosrun ov2slam ov2slam_node src/ov2slam/parameters_files/fast/euroc/euroc_mono.y
 
 shell2
 ```bash
-roscore &
-
 cd /workspace/catkin_ws
 rosrun rviz rviz -d src/ov2slam/ov2slam_visualization.rviz
 ```
