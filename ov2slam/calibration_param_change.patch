@@ -1,0 +1,70 @@
+diff --git a/parameters_files/accurate/tartanair/tartanair_mono.yaml b/parameters_files/accurate/tartanair/tartanair_mono.yaml
+index 1279fc9..fc6bb15 100755
+--- a/parameters_files/accurate/tartanair/tartanair_mono.yaml
++++ b/parameters_files/accurate/tartanair/tartanair_mono.yaml
+@@ -5,8 +5,8 @@
+ # Camera Parameters. Adjust them!
+ #--------------------------------------------------------------------------------------------
+ 
+-Camera.topic_left: /cam0/image_raw
+-Camera.topic_right: /cam1/image_raw
++Camera.topic_left: /device_0/sensor_1/Color_0/image/data
++Camera.topic_right: /device_0/sensor_1/Color_0/image/data
+ 
+ Camera.model_left: pinhole
+ Camera.model_right: pinhole
+diff --git a/parameters_files/accurate/tartanair/tartanair_stereo.yaml b/parameters_files/accurate/tartanair/tartanair_stereo.yaml
+index 686593b..575644c 100755
+--- a/parameters_files/accurate/tartanair/tartanair_stereo.yaml
++++ b/parameters_files/accurate/tartanair/tartanair_stereo.yaml
+@@ -5,8 +5,8 @@
+ # Camera Parameters. Adjust them!
+ #--------------------------------------------------------------------------------------------
+ 
+-Camera.topic_left: /cam0/image_raw
+-Camera.topic_right: /cam1/image_raw
++Camera.topic_left: /device_0/sensor_1/Color_0/image/data
++Camera.topic_right: /device_0/sensor_1/Color_0/image/data
+ 
+ Camera.model_left: pinhole
+ Camera.model_right: pinhole
+diff --git a/parameters_files/fast/euroc/euroc_mono.yaml b/parameters_files/fast/euroc/euroc_mono.yaml
+index 2b50de5..9af1f64 100755
+--- a/parameters_files/fast/euroc/euroc_mono.yaml
++++ b/parameters_files/fast/euroc/euroc_mono.yaml
+@@ -5,16 +5,16 @@
+ # Camera Parameters. Adjust them!
+ #--------------------------------------------------------------------------------------------
+ 
+-Camera.topic_left: /cam0/image_raw
+-Camera.topic_right: /cam1/image_raw
++Camera.topic_left: /device_0/sensor_1/Color_0/image/data
++Camera.topic_right: /device_0/sensor_1/Color_0/image/data
+ 
+ Camera.model_left: pinhole
+ Camera.model_right: pinhole
+ 
+-Camera.left_nwidth: 752
++Camera.left_nwidth: 680
+ Camera.left_nheight: 480
+ 
+-Camera.right_nwidth: 752
++Camera.right_nwidth: 680
+ Camera.right_nheight: 480
+ 
+ # Camera calibration and distortion parameters (OpenCV) 
+diff --git a/parameters_files/fast/tartanair/tartanair_mono.yaml b/parameters_files/fast/tartanair/tartanair_mono.yaml
+index b2af410..8f16626 100755
+--- a/parameters_files/fast/tartanair/tartanair_mono.yaml
++++ b/parameters_files/fast/tartanair/tartanair_mono.yaml
+@@ -5,8 +5,8 @@
+ # Camera Parameters. Adjust them!
+ #--------------------------------------------------------------------------------------------
+ 
+-Camera.topic_left: /cam0/image_raw
+-Camera.topic_right: /cam1/image_raw
++Camera.topic_left: /device_0/sensor_1/Color_0/image/data
++Camera.topic_right: /device_0/sensor_1/Color_0/image/data
+ 
+ Camera.model_left: pinhole
+ Camera.model_right: pinhole
