@@ -22,7 +22,7 @@ docker run --gpus all --shm-size=8g -v `pwd`:/workspace/work \
 
 To run it, please check the [README.md](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
-### Example: SLAM with Realsense D435i
+### Example: RGBD SLAM with Realsense D435i
 1. Make a configuration file. you can use `src/ORB_SLAM3/Examples/RGB-D/TUM1.yaml` as a template. Edit the camera intrinsic parameter.
 
 Here's the my realsense d435i camera intrinsic from Open3D's realsense_recorder. Als I prepared patch `realsense_intrinsic_patch.patch`.
@@ -73,4 +73,20 @@ roslaunch realsense2_camera rs_d435_camera_with_model.launch
 
 ```
 rosbag play --pause /workspace/work/realsense_640x480.bag /device_0/sensor_1/Color_0/image/data:=/camera/rgb/image_raw /device_0/sensor_0/Depth_0/image/data:=/camera/depth_registered/image_raw
+```
+
+### Example: Monocular&IMU SLAM with realsense D435i
+Use these configuration diffs.
+
+* [ORB_SLAM D435i config patch](./mono_inertial_orb_slam.patch)
+* [realsense ros D435i congig patch](./mono_inertial_realsense.patch)
+
+The command is as below for respectiely.
+
+```
+roslaunch realsense2_camera rs_d435_camera_with_model.launch
+```
+
+```
+rosrun ORB_SLAM3 Mono_Inertial src/ORB_SLAM3/Vocabulary/ORBvoc.txt src/ORB_SLAM3/Examples/Monocular-Inertial/EuRoC.yaml /camera/image_raw:=/camera/color/image_raw /imu:=/camera/imu
 ```

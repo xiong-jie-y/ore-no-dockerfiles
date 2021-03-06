@@ -1,0 +1,31 @@
+diff --git a/realsense2_camera/launch/rs_d435_camera_with_model.launch b/realsense2_camera/launch/rs_d435_camera_with_model.launch
+index 4e41790..a0ae256 100644
+--- a/realsense2_camera/launch/rs_d435_camera_with_model.launch
++++ b/realsense2_camera/launch/rs_d435_camera_with_model.launch
+@@ -10,7 +10,7 @@
+   <arg name="fisheye_height"      default="480"/>
+   <arg name="enable_fisheye"      default="false"/>
+ 
+-  <arg name="depth_width"         default="640"/>
++  <arg name="depth_width"         default="848"/>
+   <arg name="depth_height"        default="480"/>
+   <arg name="enable_depth"        default="true"/>
+ 
+@@ -19,6 +19,8 @@
+   <arg name="enable_infra1"       default="true"/>
+   <arg name="enable_infra2"       default="true"/>
+ 
++  <arg name="hold_back_imu_for_frames"       default="false"/>
++
+   <arg name="color_width"         default="640"/>
+   <arg name="color_height"        default="480"/>
+   <arg name="enable_color"        default="true"/>
+@@ -43,7 +45,7 @@
+   <arg name="clip_distance"             default="-2"/>
+   <arg name="linear_accel_cov"          default="0.01"/>
+   <arg name="initial_reset"             default="false"/>
+-  <arg name="unite_imu_method"          default=""/>
++  <arg name="unite_imu_method"          default="linear_interpolation"/>
+   <arg name="topic_odom_in"             default="odom_in"/>
+   <arg name="calib_odom_file"           default=""/>
+   <arg name="publish_odom_tf"           default="true"/>
