@@ -49,17 +49,22 @@ Here's the my realsense d435i camera intrinsic from Open3D's realsense_recorder.
 
 ```
 docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
+roscore
 ```
 
 3. Run the orb-slam3. The depth/rgb topic from the realsense wrapper is different from the orb-slam3's one. so please remap it with the argument.
 
 ```
+docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
+
 rosrun ORB_SLAM3 RGBD src/ORB_SLAM3/Vocabulary/ORBvoc.txt src/ORB_SLAM3/Examples/RGB-D/TUM1.yaml /camera/rgb/image_raw:=/camera/color/image_raw /camera/depth_registered/image_raw:=/camera/depth/image_rect_raw
 ```
 
-4. Run the camera stream.
+4. Run the camera stream. Please carefully choose launch file if you want to use different realsense sensor.
 
 ```
+docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
+
 roslaunch realsense2_camera rs_d435_camera_with_model.launch
 ```
 
