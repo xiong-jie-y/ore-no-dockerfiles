@@ -1,0 +1,31 @@
+diff --git a/Examples/RGB-D/TUM1.yaml b/Examples/RGB-D/TUM1.yaml
+index 7100039..aa85871 100644
+--- a/Examples/RGB-D/TUM1.yaml
++++ b/Examples/RGB-D/TUM1.yaml
+@@ -6,16 +6,16 @@
+ Camera.type: "PinHole"
+ 
+ # Camera calibration and distortion parameters (OpenCV) 
+-Camera.fx: 517.306408
+-Camera.fy: 516.469215
+-Camera.cx: 318.643040
+-Camera.cy: 255.313989
+-
+-Camera.k1: 0.262383
+-Camera.k2: -0.953104
+-Camera.p1: -0.005358
+-Camera.p2: 0.002628
+-Camera.k3: 1.163314
++Camera.fx: 612.6339111328125
++Camera.fy: 611.052734375
++Camera.cx: 327.3898010253906
++Camera.cy: 253.2864227294922
++
++Camera.k1: 0.0
++Camera.k2: 0.0
++Camera.p1: 0.0
++Camera.p2: 0.0
++Camera.k3: 0.0
+ 
+ Camera.width: 640
+ Camera.height: 480

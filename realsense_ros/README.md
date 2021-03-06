@@ -12,7 +12,7 @@ You can copy and paste from this Dockerfile.
 To build the image, just run.
 
 ```
-
+docker build  --rm -t ros-realsense .
 ```
 
 To run the docker run the following command.
@@ -24,6 +24,6 @@ docker run --gpus all --shm-size=8g -v `pwd`:/workspace/work \
      -e LOCAL_UID=$(id -u $USER)  -e LOCAL_GID=$(id -g $USER) \
      --privileged \
      --env="QT_X11_NO_MITSHM=1"  -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY \
-     -it room-scale-ar bash
+     -it ros-realsense bash
 ```
 
