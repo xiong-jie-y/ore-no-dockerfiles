@@ -60,7 +60,8 @@ docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
 rosrun ORB_SLAM3 RGBD src/ORB_SLAM3/Vocabulary/ORBvoc.txt src/ORB_SLAM3/Examples/RGB-D/TUM1.yaml /camera/rgb/image_raw:=/camera/color/image_raw /camera/depth_registered/image_raw:=/camera/depth/image_rect_raw
 ```
 
-4. Run the camera stream. Please carefully choose launch file if you want to use different realsense sensor.
+
+4. Run the camera stream. Please carefully choose launch file if you want to use different realsense sensor. The parameter config is in the `realsense_config.patch`
 
 ```
 docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
@@ -68,7 +69,7 @@ docker exec --user user -it ${DOCKER_CONTAINER_ID} bash
 roslaunch realsense2_camera rs_d435_camera_with_model.launch
 ```
 
-5. (Optional) This is the example to play rosbag instead of live camera.
+1. (Optional) This is the example to play rosbag instead of live camera.
 
 ```
 rosbag play --pause /workspace/work/realsense_640x480.bag /device_0/sensor_1/Color_0/image/data:=/camera/rgb/image_raw /device_0/sensor_0/Depth_0/image/data:=/camera/depth_registered/image_raw
