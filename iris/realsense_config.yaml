@@ -1,0 +1,59 @@
+# Equirectangular model for RICOH THETA S
+#==============#
+# Camera Model #
+#==============#
+Camera.name: "KITTI monocular 00"
+Camera.setup: "monocular"
+Camera.model: "perspective"
+
+Camera.fps: 30.0
+Camera.cols: 640
+Camera.rows: 480
+
+Camera.fx: 612.6339111328125
+Camera.fy: 611.052734375
+Camera.cx: 327.3898010253906
+Camera.cy: 253.2864227294922
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+Camera.color_order: "RGB"
+
+#================#
+# ORB Parameters #
+#================#
+Feature.max_num_keypoints: 2000
+Feature.scale_factor: 1.2
+Feature.num_levels: 8
+Feature.ini_fast_threshold: 20
+Feature.min_fast_threshold: 7
+
+# transform of camera 
+Init.transform: [ 0.0, 0.0, 0.0]
+# normal vector of camera
+Init.normal: [ 1.0, 0.0, 0.0]
+# upper vector of camera
+Init.upper: [ 0, 0, 1]
+# scale
+Init.scale: 2.0
+
+Iris.scale_gain: 10.0
+Iris.smooth_gain: 0.0
+Iris.latitude_gain: 10.0
+Iris.altitude_gain: 0.2
+
+Iris.distance_min: 0.5
+Iris.distance_max: 3.0
+
+Iris.iteration: 5
+Iris.converge_translation: 0.10
+Iris.converge_rotation: 0.3
+
+# Map Parameter
+Map.voxel_grid_leaf: 0.400
+Map.submap_grid_leaf: 50
+Map.normal_search_leaf: 0.6

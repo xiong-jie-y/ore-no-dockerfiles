@@ -1,0 +1,74 @@
+# transform of camera 
+Init.transform: [ 0.0, 0.0, 0.0]
+# normal vector of camera
+Init.normal: [ 1.0, 0.0, 0.0]
+# upper vector of camera
+Init.upper: [ 0, 0, 1]
+# scale
+Init.scale: 1.0
+
+Iris.scale_gain: 50.0
+Iris.smooth_gain: 0.0
+Iris.latitude_gain: 10.0
+Iris.altitude_gain: 0.2
+
+Iris.distance_min: 0.5
+Iris.distance_max: 3.0
+
+Iris.iteration: 5
+Iris.converge_translation: 0.10
+Iris.converge_rotation: 0.3
+
+# Map Parameter
+Map.voxel_grid_leaf: 0.400
+Map.submap_grid_leaf: 50
+Map.normal_search_leaf: 0.6
+
+
+# KITTI stereo
+#==============#
+# Camera Model #
+#==============#
+Camera.name: "KITTI stereo"
+Camera.setup: "stereo"
+Camera.model: "perspective"
+
+Camera.fps: 30.0
+Camera.cols: 1280
+Camera.rows: 720
+
+Camera.fx: 521.15124512
+Camera.fy: 521.15124512
+Camera.cx: 637.13702393
+Camera.cy: 356.67489624
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+Camera.color_order: "Gray"
+Camera.focal_x_baseline: 12.007148
+# maybe unit is [mm]?
+# Camera.focal_x_baseline: 120.07148
+
+#================#
+# ORB Parameters #
+#================#
+Feature.max_num_keypoints: 2000
+Feature.scale_factor: 1.2
+Feature.num_levels: 8
+Feature.ini_fast_threshold: 12
+Feature.min_fast_threshold: 7
+
+
+#=====================#
+# Tracking Parameters #
+#=====================#
+depth_threshold: 40
+
+#========================#
+# Initializer Parameters #
+#========================#
+Initializer.num_min_triangulated_pts: 100
